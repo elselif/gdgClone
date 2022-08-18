@@ -3,20 +3,20 @@ import React from "react";
 export const BillIcons = () => {
   return (
     <div className="flex items-center ">
-      <button className=" p-2 text-gray-600 hover:bg-xgray-extralight hover:rounded-full focus:bg-xgray-light focus:rounded-full">
+      <button className={buttonStyle}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-600 hover:bg-xgray-extralight hover:rounded-full focus:bg-xgray-light focus:rounded-full "
+          className={svgStyle}
           viewBox="0 0 20 20"
           fill="currentColor"
         >
           <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
         </svg>
       </button>
-      <button className=" p-2 ml-4 text-gray-600 hover:bg-xgray-extralight hover:rounded-full focus:bg-xgray-light focus:rounded-full">
+      <button className={buttonStyle}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-600   text-gray-600 hover:bg-xgray-extralight hover:rounded-full focus:bg-xgray-light focus:rounded-full"
+          className={svgStyle}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -32,3 +32,23 @@ export const BillIcons = () => {
     </div>
   );
 };
+
+
+const buttonStyle = `
+p-2 
+text-gray-600 
+hover:bg-xgray-extralight 
+hover:rounded-full 
+focus:bg-xgray-light 
+focus:rounded-full
+`
+
+const svgStyle = `
+h-6
+w-6 
+text-gray-600 
+hover:bg-xgray-extralight 
+hover:rounded-full 
+focus:bg-xgray-light 
+focus:rounded-full
+`
