@@ -1,10 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-],
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Helvetica", "Arial", "sans-serif"],
+        serif: ["ui-serif", "Georgia"],
+        mono: ["ui-monospace", "SFMono-Regular"],
+        display: ["Oswald"],
+        body: ['"Open Sans"'],
+      },
+      colors: {
+        xgray: {
+          dark: " RGBA(0, 0, 0, 0.93)",
+          light: "#e5e5e5",
+          extralight: "#efefef",
+        },
+      },
+    },
+    plugins: [],
   },
-  plugins: [],
-}
+});
