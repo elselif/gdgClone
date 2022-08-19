@@ -17,25 +17,13 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { ThemeProvider } from '@material-ui/core/styles';
 
-import { createTheme } from '@material-ui/core/styles'
 
-const theme = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 895,
-        lg: 1200,
-        xl: 1536,
-      },
-    },
-  });
+
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-    breakpoint: string;
   window?: () => Window;
 }
 
@@ -70,11 +58,9 @@ export default function DrawerAppBar(props: Props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
-  const breakpoints = ['xs', 'tiny', 'sm', 'md', 'lg', 'xl'];
 
 
   return (
-    <ThemeProvider theme={theme}>
     <Box sx={{ display: 'flex' , justifyContent: 'space-between'}}>
       <AppBar component="nav" >
         <Toolbar>
@@ -132,6 +118,5 @@ export default function DrawerAppBar(props: Props) {
        
       </Box>
     </Box>
-    </ThemeProvider>
   );
 }
