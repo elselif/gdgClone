@@ -3,6 +3,12 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+
+    screens:{
+      
+      'md': {'min': '765px', 'max': '960px'},
+    },
+
     extend: {
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],
@@ -18,7 +24,10 @@ module.exports = withMT({
           extralight: "#efefef",
         },
       },
+     
     },
+    
+    
     plugins: [],
   },
 });
