@@ -12,24 +12,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { shadows } from '@mui/system';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 
 
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Events', 'Team','Speakers','About','Contact','Blogs'];
 
-export default function DrawerAppBar(props: Props) {
+export default function Navbar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -113,7 +108,6 @@ export default function DrawerAppBar(props: Props) {
       </Box>
       <Box component="main" sx={{ p: 0 }}>
         <Toolbar />
-       
       </Box>
     </Box>
   );
