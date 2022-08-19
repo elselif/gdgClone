@@ -15,7 +15,6 @@ import Button from '@mui/material/Button';
 import { shadows } from '@mui/system';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
-import { ThemeProvider } from '@material-ui/core/styles';
 
 
 
@@ -77,8 +76,7 @@ export default function DrawerAppBar(props: Props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 3, }}
-          >
+            sx={{ flexGrow: 3, }}>
             HSD CLUB
           </Typography>
           </Box>
@@ -106,14 +104,14 @@ export default function DrawerAppBar(props: Props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 0 }}>
         <Toolbar />
        
       </Box>
