@@ -20,6 +20,7 @@ module.exports = withMT({
       colors: {
         xgray: {
           dark: " RGBA(0, 0, 0, 0.93)",
+          medium : "#c7c7c7",
           light: "#e5e5e5",
           extralight: "#efefef",
         },
