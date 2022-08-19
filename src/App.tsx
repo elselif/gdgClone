@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import BottomAppBar from './components/BottomApBar';
+import FixedBottomNavigation from './components/BottomApBar';
 import DrawerAppBar from './components/Navbar';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
      
     <DrawerAppBar></DrawerAppBar>
-    <BottomAppBar/>
+    <FixedBottomNavigation/>
     </div>
   );
 }
