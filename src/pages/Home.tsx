@@ -1,11 +1,11 @@
 import React from 'react'
-import homeHi from "../img/homeHi";
 
 export default function Home() {
   return (
-    <div>
-        <h1>deneme</h1>
-        <img src={homeHi} ></img>
- </div>
+    <>
+      <div className='bg-red-500 h-[312px] w-[100%]'>
+          <img src={require("../images/hello.png")} alt='i' width="380px" />
+      </div>
+    </>
   )
 }
