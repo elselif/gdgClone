@@ -100,7 +100,7 @@ export default function Navbar(props: Props) {
             HSD Club
           </Typography>
           </Box>
-          <Box className='hidden md:block' sx={{ marginLeft:'auto'}}>
+          <Box className='hidden tablet:block' sx={{ marginLeft:'auto'}}>
             {navItems.map((item) => (
               <Button key={item} sx={{ letterSpacing: 1 , fontWeight: 'regular',color: '#202020' ,marginX:'11px'}}>
                 {item}
