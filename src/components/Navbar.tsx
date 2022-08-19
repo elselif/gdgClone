@@ -14,12 +14,34 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+import { Icon } from '@mui/material';
 
-
+const theme = createTheme({
+  palette: {
+    primary:{
+      main: '#212121',
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#ffff',
+    },
+    error:{
+      main:'#737373',
+    },
+  },
+  typography: {
+    button: {
+      textTransform: 'none'
+    }
+  }
+});
 
 interface Props {
   window?: () => Window;
 }
+
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Events', 'Team','Speakers','About','Contact','Blogs'];
@@ -52,11 +74,13 @@ export default function Navbar(props: Props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  
 
 
   return (
-    <Box sx={{ display: 'flex' , justifyContent: 'space-between'}}>
-      <AppBar component="nav" >
+    <ThemeProvider theme={theme}>
+    <Box  sx={{ display: 'flex' , justifyContent: 'space-between'}}>
+      <AppBar component="nav" color='secondary' >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -69,23 +93,31 @@ export default function Navbar(props: Props) {
           </IconButton>
           <Box  sx={{ display:{sm:'flex'},marginRight:'auto'}}>
           <Typography
+            color="primary"
             variant="h6"
             component="div"
-            sx={{ flexGrow: 3, }}>
-            HSD CLUB
+            sx={{ flexGrow: 3,fontSize: 23,fontWeight: 'medium'}}>
+            HSD Club
           </Typography>
           </Box>
           <Box className='hidden md:block' sx={{ marginLeft:'auto'}}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' ,marginX:'9px'}}>
+              <Button key={item} sx={{ letterSpacing: 1 , fontWeight: 'regular',color: '#202020' ,marginX:'11px'}}>
                 {item}
               </Button>
             ))}
             
           </Box>
-          <Box sx={{ justifyContent: 'space-between'}}>
-            <NotificationsIcon sx={{fontSize: 22,marginTop: '5px',marginLeft:'11px'}}/>
-            <Brightness4Icon sx={{fontSize: 22,marginTop: '5px',marginLeft:'27px'}}/>
+          <Box sx={{ justifyContent: 'space-between',}}>
+            <IconButton>
+            <NotificationsIcon sx={{color:'#737373', fontSize: 24,marginTop: '1px',}}/>
+
+            </IconButton>
+            <span className='mx-3'/>
+            <IconButton>
+            <Brightness4Icon sx={{color:'#737373',fontSize: 24,marginTop: '1px',}}/>
+
+            </IconButton>
             </Box>
         </Toolbar>
       </AppBar>
@@ -110,5 +142,6 @@ export default function Navbar(props: Props) {
         <Toolbar />
       </Box>
     </Box>
+    </ThemeProvider>
   );
 }
