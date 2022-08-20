@@ -17,46 +17,38 @@ const Img = styled('img')({
 export default function ComplexGrid() {
   return (
     <>
-    <Navbar/>
-    <Paper
-      sx={{
-        p: 2,
-        margin: 'auto',
-        maxWidth: 700,
-        flexGrow: 1,
-        
-        
-      }}
-    >
-      <Grid container spacing={2}>
-        <Grid item>
-          <ButtonBase sx={{ width: 500, height: 500 }}>
-          <img src={require("../images/hello.png")} alt='i'className='w-auto h-auto' />
-          </ButtonBase>
-        </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
-                Standard license
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                Full resolution 1920x1080 • JPEG
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                ID: 1030114
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                Remove
-              </Typography>
-            </Grid>
+      <Navbar />
+      <Paper
+        sx={{
+          p: 2,
+          margin: 'auto',
+          maxWidth: 1200,
+          flexGrow: 1,
+        }}
+      >
+        <Grid container spacing={2}>
+          <Grid item>
+            <ButtonBase sx={{ width: 280, height: 280 }}>
+              <img src={require("../images/hello.png")} alt='i' className='w-auto h-auto' />
+            </ButtonBase>
           </Grid>
-         
+          <Grid item xs={12} sm container>
+            <Grid item xs container direction="column" spacing={2}>
+              <Grid item xs>
+                <div className='flex float-left'>
+                  Selam
+                </div>
+              </Grid>
+              <Grid item>
+                <Typography sx={{ cursor: 'pointer' }} variant="body2">
+                  Remove
+                </Typography>
+              </Grid>
+            </Grid>
+
+          </Grid>
         </Grid>
-      </Grid>
-    </Paper>
+      </Paper>
     </>
   );
 }
