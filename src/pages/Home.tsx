@@ -28,7 +28,7 @@ export default function ComplexGrid() {
       >
         <Grid container spacing={2}>
           <Grid item>
-            <ButtonBase sx={{ width: 280, height: 280 }}>
+            <ButtonBase sx={{ width: 290, height: 280 }}>
               <img src={require("../images/hello.png")} alt='i' className='w-auto h-auto' />
             </ButtonBase>
           </Grid>
