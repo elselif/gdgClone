@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import Navbar from '../components/Navbar';
 import { start } from 'repl';
+import HomeDo from '../components/homeDo';
 
 
 
@@ -44,6 +45,7 @@ export default function ComplexGrid() {
       </Grid>
       </div>
 
+      <HomeDo></HomeDo>
 
     </>
   );
