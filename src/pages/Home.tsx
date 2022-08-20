@@ -14,27 +14,26 @@ export default function ComplexGrid() {
     <>
       <Navbar />
 
+      <div className='mt-10 mx-24'>
 
-      <Grid container spacing={2}>
-        <Grid item>
-          <ButtonBase className='w-auto h-auto lg:w-[500px] '>
-            <img src={require("../images/hello.png")} alt='i' className='w-auto h-auto' />
+      <Grid alignItems="center"  direction="row"  justifyContent="flex-start" container >
+        <Grid item >
+          <ButtonBase className="">
+            <img src={require("../images/hello.png")} alt='i' className='lg:w-[300px] sm:w-[500px] whitespace-nowrap' />
           </ButtonBase>
         </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs container spacing={2}>
-            <Grid className=' ' item xs >
+        <Grid item xs={12} sm container    >
+          <Grid item xs container  >
+            <Grid className=' ' item xs container direction="column"   justifyContent="flex-start"   alignItems="flex-start" >
               <Typography className='' variant="h3" component="div" sx={{}}>
                 Make good things <span className='text-blue-800'>together</span>.
               </Typography>
               <Typography variant="body2" gutterBottom>
                 GDG Istanbul
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body1" color="text.secondary" gutterBottom>
                 GDG Istanbul, Google teknolojilerine ilgi duyan, bir şeyler geliştirmek ve bilgi paylaşımında bulunmak isteyen insanlardan oluşan bir topluluktur.
               </Typography>
-            </Grid>
-            <Grid item>
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
                 Remove
               </Typography>
@@ -43,6 +42,8 @@ export default function ComplexGrid() {
           </Grid>
         </Grid>
       </Grid>
+      </div>
+
 
     </>
   );
