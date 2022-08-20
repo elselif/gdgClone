@@ -7,44 +7,31 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Navbar from '../components/Navbar';
 import { start } from 'repl';
 
-const Img = styled('img')({
-  margin: 'auto',
-  display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%',
-});
+
 
 export default function ComplexGrid() {
   return (
     <>
     <Navbar/>
-    <Paper
-      sx={{
-        p: 2,
-        margin: 'auto',
-        maxWidth: 700,
-        flexGrow: 1,
-        
-        
-      }}
-    >
+    
+    
       <Grid container spacing={2}>
         <Grid item>
-          <ButtonBase sx={{ width: 500, height: 500 }}>
+          <ButtonBase className='w-auto h-auto lg:w-[500px] '>
           <img src={require("../images/hello.png")} alt='i'className='w-auto h-auto' />
           </ButtonBase>
         </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
-                Standard license
+        <Grid   item xs={12} sm container>
+          <Grid  item xs container spacing={2}>
+            <Grid className=' ' item xs >
+              <Typography className=''  variant="h3" component="div" sx={{}}>
+                Make good things <span className='text-blue-800'>together</span>.
               </Typography>
               <Typography variant="body2" gutterBottom>
-                Full resolution 1920x1080 • JPEG
+                GDG Istanbul
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                ID: 1030114
+              GDG Istanbul, Google teknolojilerine ilgi duyan, bir şeyler geliştirmek ve bilgi paylaşımında bulunmak isteyen insanlardan oluşan bir topluluktur.
               </Typography>
             </Grid>
             <Grid item>
@@ -56,7 +43,6 @@ export default function ComplexGrid() {
          
         </Grid>
       </Grid>
-    </Paper>
     </>
   );
 }
