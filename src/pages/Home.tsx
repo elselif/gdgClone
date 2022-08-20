@@ -7,6 +7,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Navbar from '../components/Navbar';
 import { start } from 'repl';
 import { Button } from '@mui/material';
+import HomeDo from '../components/homeDo';
 
 
 
@@ -56,6 +57,7 @@ export default function ComplexGrid() {
         </Grid>
       </div>
 
+      <HomeDo></HomeDo>
 
     </>
   );
