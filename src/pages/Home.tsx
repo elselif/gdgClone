@@ -13,13 +13,13 @@ export default function ComplexGrid() {
   return (
     <>
       <Navbar />
-
-      <div className='mt-10 mx-32 mb-10'>
+      
+      <div className='items-center lg:mt-10 lg:ml-10'>
 
       <Grid alignItems="center"  direction="row"  justifyContent="flex-start" container >
         <Grid item >
           <ButtonBase className="">
-            <img src={require("../images/hello.png")} alt='i' className='lg:w-[350px] sm:w-[500px] whitespace-nowrap' />
+            <img  src={require("../images/hello.png")} alt='i' className='lg:w-[350px] sm:w-[500px]  whitespace-nowrap ' />
           </ButtonBase>
         </Grid>
         <Grid item xs={12} sm container    >
