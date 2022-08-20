@@ -7,6 +7,7 @@ module.exports = withMT({
     screens:{
       
       'tablet': {'min': '905px', },
+      'mobil' : {'max':'600px'},
     },
 
     extend: {
