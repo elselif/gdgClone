@@ -1,18 +1,62 @@
-import React from 'react'
-import Box from '@mui/material/Box';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import ButtonBase from '@mui/material/ButtonBase';
 import Navbar from '../components/Navbar';
+import { start } from 'repl';
 
+const Img = styled('img')({
+  margin: 'auto',
+  display: 'block',
+  maxWidth: '100%',
+  maxHeight: '100%',
+});
 
-export default function Home() {
+export default function ComplexGrid() {
   return (
     <>
-      <div >
-      <Navbar/>
-        <Box className="items-start justify-items-start  flex flex-row  " sx={{ }}>
-          <img src={require("../images/hello.png")} alt='i' width="500px " height="500px" className='' />
-          <h1 className='text-4xl	pt-40 mobil:text-7xl  '>Make good things <span className='text-blue-600	'>together</span>.</h1>
-          </Box>
-      </div>
+    <Navbar/>
+    <Paper
+      sx={{
+        p: 2,
+        margin: 'auto',
+        maxWidth: 700,
+        flexGrow: 1,
+        
+        
+      }}
+    >
+      <Grid container spacing={2}>
+        <Grid item>
+          <ButtonBase sx={{ width: 500, height: 500 }}>
+          <img src={require("../images/hello.png")} alt='i'className='w-auto h-auto' />
+          </ButtonBase>
+        </Grid>
+        <Grid item xs={12} sm container>
+          <Grid item xs container direction="column" spacing={2}>
+            <Grid item xs>
+              <Typography gutterBottom variant="subtitle1" component="div">
+                Standard license
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                Full resolution 1920x1080 • JPEG
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                ID: 1030114
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography sx={{ cursor: 'pointer' }} variant="body2">
+                Remove
+              </Typography>
+            </Grid>
+          </Grid>
+         
+        </Grid>
+      </Grid>
+    </Paper>
     </>
-  )
+  );
 }
