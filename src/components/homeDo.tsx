@@ -9,7 +9,7 @@ import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 
 export default function HomeDo() {
     return (
-        <div className=' flex space-x-4 m-24 p-10 bg-orange-900  '>
+        <div className=' flex space-x-4 my-5 mx-24 p-10 bg-orange-900 '>
             <div className='' >
                 
                 <h2 className='text-xl text-left my-3 '>What We Do?</h2>
