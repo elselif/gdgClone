@@ -7,7 +7,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import SchoolIcon from '@mui/icons-material/School';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 
-export default function HomeDo() {
+export default function WhatWeDo() {
     return (
         <div className=' flex space-x-4 my-5 mx-24 p-10 bg-orange-900 '>
             <div className='' >
