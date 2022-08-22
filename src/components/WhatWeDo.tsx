@@ -1,53 +1,73 @@
 import * as React from 'react';
-import Item from '@mui/material/Paper';
-import Box from '@mui/material/Grid';
-import { Grid, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Unstable_Grid2';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import CodeIcon from '@mui/icons-material/Code';
 import SchoolIcon from '@mui/icons-material/School';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
+import { Typography } from '@mui/material';
 
-export default function WhatWeDo() {
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
+
+export default function FullWidthGrid() {
     return (
-        <div className='space-x-4 my-5 mx-24 p-10 bg-orange-900 '>
-            <div className='' >
+        <Box sx={{ flexGrow: 1, marginTop: 5, marginBottom: 5 }} className=" p-5 bg-xgray-normal mobil:px-5 xl:mx-32">
+            <Grid container spacing={1} >
+                <Grid xs={12} md={4} sx={{ backgroundColor: '#f5f5f5' }}>
+                    <Typography variant='h5' align='left' >What we do ?</Typography>
+                    <Typography variant='body1' align='left' sx={{ marginBottom: 3 }}>Google Developer Groups (GDGs) are for developers who are interested in Google's developer technology.</Typography>
+                    <Typography variant='body1' align='left' sx={{ marginBottom: 1 }}>About different Google technologies</Typography>
+                </Grid>
+                <Grid xs={6} md={2} >
+                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                        <Grid >
+                            <ChatBubbleIcon fontSize='large' />
+                            <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Talks</Typography>
+                            <Typography color="black" variant='body2'>Get updated with the latest news and announcements</Typography>
 
-                <h2 className='text-xl text-left my-3 '>What We Do?</h2>
-                <p className='text-left'>Google Developer Groups (GDGs) are for developers who are interested in Google's developer technology.</p>
-                <br></br>
-                <p className='text-left '>About different Google technologies</p>
-            </div>
-            <div >
-                <div className=''>
-                    <Grid>
-                        <ChatBubbleIcon></ChatBubbleIcon>
-                    </Grid>
-                    <h5 className='text-xl my-3'>Talks</h5>
-                    <p className='mt-5'>Get updated with the latest news and announcements</p>
-                </div>
-                <div className=''>
-                    <Grid>
-                        <CodeIcon></CodeIcon>
-                    </Grid>
-                    <h5 className='text-xl my-3	' >Codelabs</h5>
-                    <p className='mt-5'>Get hands-on experience and guidance from the community members</p>
+                        </Grid>
+                    </Item>
+                </Grid>
+                <Grid xs={6} md={2}>
+                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                        <Grid>
+                            <CodeIcon fontSize='large' />
+                            <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Codelabs</Typography>
+                            <Typography color="black" variant='body2'>Get hands-on experience and guidance from the community members</Typography>
 
-                </div>
-                <div className=''>
-                    <Grid>
-                        <SchoolIcon></SchoolIcon>
-                    </Grid>
-                    <h5 className='text-xl my-3	'>Campus Roadshows</h5>
-                    <p className='mt-5'>Share knowledge in different Companies, colleges and universities</p>
-                </div>
-                <div className=''>
-                    <Grid>
-                        <BubbleChartIcon></BubbleChartIcon>
-                    </Grid>
-                    <h5 className='text-xl my-3	'>Live Viewing Parties</h5>
-                    <p className='mt-5'>Share knowledge in different Companies, colleges and universities</p>
-                </div>
-            </div>
-        </div>
-    )
+                        </Grid>
+                    </Item >
+                </Grid>
+                <Grid xs={6} md={2}>
+                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                        <Grid>
+                            <SchoolIcon fontSize='large' />
+                            <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Campus Roadshows</Typography>
+                            <Typography color="black" variant='body2'>Share knowledge in different Companies, colleges and universities</Typography>
+                        </Grid>
+                    </Item>
+                </Grid>
+                <Grid xs={6} md={2}>
+                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                        <Grid>
+                            <BubbleChartIcon fontSize='large' />
+                            <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Live Viewing Parties</Typography>
+                            <Typography color="black" variant='body2'>Share knowledge in different Companies, colleges and universities</Typography>
+                        </Grid>
+                    </Item>
+                </Grid>
+
+
+
+            </Grid>
+        </Box>
+    );
 }
