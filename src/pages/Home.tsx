@@ -4,7 +4,7 @@ import { About } from '../Layouts/About';
 import { Meetings } from '../Layouts/Meeting';
 import { Events } from '../Layouts/Event';
 import { Partner } from '../Layouts/Partners';
-import WhatWeDo from '../components/homeDo';
+import WhatWeDo from '../components/WhatWeDo';
 
 export default function ComplexGrid() {
   return (
