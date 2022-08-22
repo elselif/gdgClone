@@ -2,11 +2,14 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
-import { Button } from '@mui/material';
+import { Button, makeStyles } from '@mui/material';
 
 
 
 export const HelloDiv = () => {
+
+    
+
     return (
         <>
             <div className='items-center lg:mx-32 '>
@@ -17,9 +20,9 @@ export const HelloDiv = () => {
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container    >
-                        <Grid item xs container  >
-                            <Grid className='sm:items-center ' item xs container direction="column" justifyContent="flex-start" alignItems="flex-start" >
-                                <Typography className='text-gray-700 font-extrabold' variant="h4" component="div" sx={{}}>
+                        <Grid item xs container ml={2} >
+                            <Grid className='sm:items-center  ' item xs container direction="column" justifyContent="flex-start" alignItems="flex-start" sx={{}}>
+                                <Typography className='text-gray-700 font-extrabold text-start ' variant="h4" component="div" sx={{}}>
                                     Make good things <span className='text-blue-800'>together</span>.
                                 </Typography>
                                 <Typography variant="h5" gutterBottom>
