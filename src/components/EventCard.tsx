@@ -7,11 +7,13 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { Paper } from '@mui/material';
 
 export const EventCard = () => {
     return (
         <>
-            <Card sx={{ minWidth: 200, maxWidth: 300, boxShadow: 7 }} >
+           
+            <Card  sx={{ minWidth: 200, maxWidth: 300, boxShadow: 0 , borderRadius: 3  }} >
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         Apr 26, 2020
@@ -23,7 +25,9 @@ export const EventCard = () => {
                 <CardActions>
                     <Button color='primary' size="small" className='text-blue'>See More</Button>
                 </CardActions>
+                
             </Card>
+            
         </>
     )
 }
@@ -50,7 +54,7 @@ const theme = createTheme({
 });
 
 const bull = (
-    <Box
+    <Box  
         component="span"
         sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
     >

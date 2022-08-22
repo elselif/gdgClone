@@ -1,16 +1,28 @@
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { Button, Card, CardActionArea, CardMedia } from '@mui/material';
 
 
 export const Partner = () => {
     return (
         <ThemeProvider theme={theme}>
-            <div className=' py-10 px-10 '>
+            <div className=' py-10 pl-32 '>
                 <div className='text-center text-black'>
-                    <h1 className='text-3xl   font-[500]'>Our <span className='text-blue-700'> Events</span> & <span className='text-blue-700'>Meetups</span></h1>
-                    <p className='text-md my-3'>At sessions that span from the technical to the visionary, let’s celebrate and discover what the technologies can enable: how product innovation, open source, and ML and AI can propel enterprises forward and solve the big problems that impact all of us.</p>
+                    <h1 className='text-3xl    text-start font-semibold	'>Our <span className='text-blue-700 '> Partners</span> </h1>
+                    <p className='text-md my-3 text-start'>A very big thank you to all our partners for their continued partnership.
+                        <span></span><br></br>
+                        If you’re interested in being showcased throughout , contact info@gdgistanbul.com to discuss sponsorship opportunities.</p>
                     <div className='mt-3'>
-                        <a href="#">See More</a>
+                        <h2 className='text-start my-5 text-xl'>Template Creator</h2>
+                        <Card sx={{ maxWidth: 200,maxHeight:400 }}>
+                       
+                            <CardMedia
+                            component="img"
+                            
+                            image={require("../images/gdg.png")}
+                            
+                            />
+                            </Card>
                     </div>
                 </div>
             </div>

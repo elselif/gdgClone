@@ -20,6 +20,8 @@ import { ThemeProvider } from '@emotion/react';
 
 
 
+
+
 const theme = createTheme({
   palette: {
     primary:{
@@ -59,7 +61,7 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 1 }}>
-        HSD CLUB
+        GDG Istanbul
       </Typography>
       <Divider />
       <List>
@@ -99,7 +101,7 @@ export default function Navbar(props: Props) {
             variant="h6"
             component="div"
             sx={{ flexGrow: 3,fontSize: 23,fontWeight: 'medium'}}>
-            HSD Club
+            GDG Istanbul
           </Typography>
           </Box>
           <Box className='hidden tablet:block' sx={{ marginLeft:'auto'}}>
