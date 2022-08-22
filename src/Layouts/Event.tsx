@@ -12,7 +12,7 @@ import { EventCard } from '../components/EventCard';
 export const Events = () => {
     return (
         <ThemeProvider theme={theme}>
-            <div className='mobil:pl-10 bg-xgray-normal py-10 pl-32  '>
+            <div className='mobil:pl-5 bg-xgray-normal py-10 pl-32  '>
                 <div className='text-left text-black'>
                     <h1 className='text-3xl font-semibold' >Our <span className='text-blue-700'> Feature Event </span> & <span className='text-blue-700'> Meetup</span></h1>
                     <p className='text-md my-3'>Events are listed in reverse chronological order by date.</p>

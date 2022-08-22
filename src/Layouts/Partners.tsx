@@ -6,7 +6,7 @@ import { Button, Card, CardActionArea, CardMedia } from '@mui/material';
 export const Partner = () => {
     return (
         <ThemeProvider theme={theme}>
-            <div className=' py-10 pl-32 '>
+            <div className=' py-10 pl-32 tablex:pl-5 '>
                 <div className='text-center text-black'>
                     <h1 className='text-3xl    text-start font-semibold	'>Our <span className='text-blue-700 '> Partners</span> </h1>
                     <p className='text-md my-3 text-start'>A very big thank you to all our partners for their continued partnership.

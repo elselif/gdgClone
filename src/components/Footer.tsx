@@ -8,7 +8,7 @@ export default function Footer() {
     
 
   return (
-    <div className='p-32  tablex:hidden '>
+    <div className='px-32 pb-10  tablex:hidden  '>
         <div className='my-4 '>
         <hr></hr>
         </div>
