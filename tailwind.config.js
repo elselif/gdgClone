@@ -22,6 +22,7 @@ module.exports = withMT({
           medium: "#c7c7c7",
           light: "#e5e5e5",
           extralight: "#efefef",
+          normal : "#f5f5f5"
         },
         xpu : {
           medium: "#4c4a78",
