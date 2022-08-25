@@ -16,6 +16,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -24,15 +25,15 @@ import { ThemeProvider } from '@emotion/react';
 
 const theme = createTheme({
   palette: {
-    primary:{
+    primary: {
       main: '#212121',
     },
     secondary: {
       // This is green.A700 as hex.
       main: '#ffff',
     },
-    error:{
-      main:'#737373',
+    error: {
+      main: '#737373',
     },
   },
   typography: {
@@ -48,7 +49,7 @@ interface Props {
 
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Events', 'Team','Speakers','About','Contact','Blogs'];
+const navItems = ['Home', 'Events', 'Team', 'Speakers', 'About', 'Contact', 'Blogs'];
 
 export default function Navbar(props: Props) {
   const { window } = props;
@@ -78,74 +79,77 @@ export default function Navbar(props: Props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
-  
+
 
 
   return (
     <ThemeProvider theme={theme}>
-    <Box  sx={{ display: 'flex' , justifyContent: 'space-between'}}>
-      <AppBar component="nav" color='secondary' >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box  sx={{ display:{sm:'flex'},marginRight:'auto'}}>
-          <Typography
-            color="primary"
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 3,fontSize: 23,fontWeight: 'medium'}}>
-            GDG Istanbul
-          </Typography>
-          </Box>
-          <Box className='hidden tablet:block' sx={{ marginLeft:'auto'}}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ letterSpacing: 1 , fontWeight: 'regular',color: '#202020' ,marginX:'11px'}}>
-                {item}
-              </Button>
-            ))}
-            
-          </Box>
-          <Box sx={{ justifyContent: 'space-between',}}>
-            <IconButton>
-            <NotificationsIcon sx={{color:'#737373', fontSize: 24,marginTop: '1px',}}/>
-
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', }}>
+        <AppBar component="nav" color='secondary' >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { md: 'none' } }}
+            >
+              <MenuIcon />
             </IconButton>
-            <span className='mx-3'/>
-            <IconButton>
-            <Brightness4Icon sx={{color:'#737373',fontSize: 24,marginTop: '1px',}}/>
-
-            </IconButton>
+            <Box sx={{ display: { sm: 'flex' }, marginRight: 'auto' }}>
+              <Typography
+                color="primary"
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 3, fontSize: 23, fontWeight: 'medium' }}>
+                GDG Istanbul
+              </Typography>
             </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
+            <Box className='hidden tablet:block' sx={{ marginLeft: 'auto' }}>
+
+              {navItems.map((item) => (
+                <Link to={`/${item}`} >
+                  <Button key={item} sx={{ letterSpacing: 1, fontWeight: 'regular', color: '#202020', marginX: '11px', cursor: "pointer", paddingX: 2, whiteSpace: 1, fontSize: 18, marginY: 2.5 }}>
+                    {item}
+                  </Button>
+                </Link>
+              ))}
+
+            </Box>
+            <Box sx={{ justifyContent: 'space-between', }}>
+              <IconButton>
+                <NotificationsIcon sx={{ color: '#737373', fontSize: 24, marginTop: '1px', }} />
+
+              </IconButton>
+              <span className='mx-3' />
+              <IconButton>
+                <Brightness4Icon sx={{ color: '#737373', fontSize: 24, marginTop: '1px', }} />
+
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <Box component="nav">
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </Box>
+        <Box  sx={{ paddingBottom: 5 }}>
+          <Toolbar />
+        </Box>
       </Box>
-      <Box component="main" sx={{ p: 0 }}>
-        <Toolbar />
-      </Box>
-    </Box>
     </ThemeProvider>
   );
 }

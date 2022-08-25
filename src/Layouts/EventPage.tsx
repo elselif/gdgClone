@@ -1,15 +1,10 @@
-import Button from '@mui/material/Button'
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+// import Box from '@mui/material/Box';
 import { EventCard } from '../components/EventCard';
 
 
-export const Events = () => {
+export const EventsPage = () => {
     return (
         <ThemeProvider theme={theme}>
             <div className='mobil:pl-5 bg-xgray-normal py-10 pl-32  '>
@@ -43,11 +38,11 @@ const theme = createTheme({
     }
 });
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
+// const bull = (
+//     <Box
+//         component="span"
+//         sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+//     >
+//         •
+//     </Box>
+// );

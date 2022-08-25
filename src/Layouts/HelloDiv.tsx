@@ -2,14 +2,11 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
-import { Button, makeStyles } from '@mui/material';
+import { Button } from '@mui/material';
 
 
 
 export const HelloDiv = () => {
-
-    
-
     return (
         <>
             <div className='items-center lg:mx-32 '>

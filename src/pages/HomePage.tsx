@@ -2,19 +2,18 @@ import Navbar from '../components/Navbar';
 import { HelloDiv } from '../Layouts/HelloDiv';
 import { About } from '../Layouts/About';
 import { Meetings } from '../Layouts/Meeting';
-import { Events } from '../Layouts/Event';
+import {  EventsPage } from '../Layouts/EventPage';
 import { Partner } from '../Layouts/Partners';
 import WhatWeDo from '../components/WhatWeDo';
 
-export default function ComplexGrid() {
+export default function HomePage() {
   return (
     <>
-      <Navbar />
       <HelloDiv />
       <WhatWeDo />
       <About />
       <Meetings />
-      <Events />
+      <EventsPage />
       <Partner />
     </>
   );
