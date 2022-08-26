@@ -5,6 +5,7 @@ import Footer from './Layouts/Footer';
 import MobilMenu from './Layouts/MobilMenu';
 import Navbar from './Layouts/Navbar';
 import EventsPage from './pages/EventsPage';
+import ThemeContext from './context/ThemeContext';
 
 //Routers link
 import Home from './pages/HomePage';
@@ -17,8 +18,8 @@ import BlogsPage from './pages/BlogsPage';
 
 function App() {
   return (
+    <ThemeContext.Provider value={{ name: 'React', author: 'React', url: 'https://reactjs.org/' }}>
     <div className="App">
-
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}> </Route>
@@ -32,8 +33,8 @@ function App() {
       </Routes>
       <MobilMenu />
       <Footer />
-
     </div>
+  </ThemeContext.Provider>
   );
 }
 

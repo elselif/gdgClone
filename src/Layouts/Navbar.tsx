@@ -25,6 +25,10 @@ import TextsmsIcon from '@mui/icons-material/Textsms';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 
+//Context
+import { createContext } from 'react';
+import ThemeContext from '../context/ThemeContext';
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -54,6 +58,8 @@ const drawerWidth = 240;
 const navItems = ['Home', 'Events', 'Team', 'Speakers', 'About', 'Contact', 'Blogs'];
 
 export default function Navbar(props: Props) {
+  const data = React.useContext(ThemeContext);
+  console.log(data);
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
