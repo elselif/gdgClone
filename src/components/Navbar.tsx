@@ -17,11 +17,13 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { Link } from 'react-router-dom';
-
-
-
-
-
+import HomeIcon from '@mui/icons-material/Home';
+import { ListItemAvatar, ListItemIcon } from '@mui/material';
+import TryIcon from '@mui/icons-material/Try';
+import PersonIcon from '@mui/icons-material/Person';
+import TextsmsIcon from '@mui/icons-material/Textsms';
+import ContactsIcon from '@mui/icons-material/Contacts';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 const theme = createTheme({
   palette: {
@@ -65,15 +67,64 @@ export default function Navbar(props: Props) {
         GDG Istanbul
       </Typography>
       <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+     <List>
+        <ListItem>
+          <Link to={`/`} >
+            <ListItemButton>
+          <ListItemIcon><HomeIcon/></ListItemIcon>
+          <ListItemText>Home</ListItemText>
             </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to={`/Events`} >
+            <ListItemButton>
+          <ListItemIcon><TryIcon/></ListItemIcon>
+          <ListItemText>Events</ListItemText>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to={`/Team`} >
+            <ListItemButton>
+          <ListItemIcon><PersonIcon/></ListItemIcon>
+          <ListItemText>Team</ListItemText>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to={`/Speakers`} >
+            <ListItemButton>
+          <ListItemIcon><TryIcon/></ListItemIcon>
+          <ListItemText>Speaker</ListItemText>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to={`/About`} >
+            <ListItemButton>
+          <ListItemIcon><TextsmsIcon/></ListItemIcon>
+          <ListItemText>About</ListItemText>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to={`/Contacts`} >
+            <ListItemButton>
+          <ListItemIcon><ContactsIcon/></ListItemIcon>
+          <ListItemText>Contact</ListItemText>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to={`/Blogs`} >
+            <ListItemButton>
+          <ListItemIcon><RssFeedIcon/></ListItemIcon>
+          <ListItemText>Blog</ListItemText>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+     </List>
     </Box>
   );
 
@@ -102,7 +153,7 @@ export default function Navbar(props: Props) {
                 variant="h6"
                 component="div"
                 sx={{ flexGrow: 3, fontSize: 23, fontWeight: 'medium' }}>
-                GDG Istanbul
+                <Link to={`/`} >GDG Istanbul</Link>
               </Typography>
             </Box>
             <Box className='hidden tablet:block' sx={{ marginLeft: 'auto' }}>
