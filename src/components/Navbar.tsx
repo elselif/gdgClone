@@ -67,58 +67,58 @@ export default function Navbar(props: Props) {
         GDG Istanbul
       </Typography>
       <Divider />
-     <List>
-        <ListItem>
+     <List >
+        <ListItem sx={{pl:0}}>
           <Link to={`/`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><HomeIcon/></ListItemIcon>
           <ListItemText>Home</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{pl:0}}>
           <Link to={`/Events`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><TryIcon/></ListItemIcon>
           <ListItemText>Events</ListItemText>
             </ListItemButton>
           </Link>
-        </ListItem>
-        <ListItem>
+        </ListItem >
+        <ListItem sx={{pl:0}}>
           <Link to={`/Team`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><PersonIcon/></ListItemIcon>
           <ListItemText>Team</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{pl:0}}>
           <Link to={`/Speakers`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><TryIcon/></ListItemIcon>
           <ListItemText>Speaker</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{pl:0}}>
           <Link to={`/About`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><TextsmsIcon/></ListItemIcon>
           <ListItemText>About</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{pl:0}}>
           <Link to={`/Contacts`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><ContactsIcon/></ListItemIcon>
           <ListItemText>Contact</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{pl:0}}>
           <Link to={`/Blogs`} >
-            <ListItemButton>
+            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
           <ListItemIcon><RssFeedIcon/></ListItemIcon>
           <ListItemText>Blog</ListItemText>
             </ListItemButton>
