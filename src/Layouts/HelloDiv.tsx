@@ -6,51 +6,7 @@ import { Button } from '@mui/material';
 
 
 
-export const HelloDiv = () => {
-    return (
-        <>
-            <div className='items-center lg:mx-32 '>
-                <Grid alignItems="center" direction="row" justifyContent="flex-start" container >
-                    <Grid item >
-                        <ButtonBase className="">
-                            <img src={require("../images/hello.png")} alt='i' className='lg:w-[350px] sm:w-[500px]  whitespace-nowrap ' />
-                        </ButtonBase>
-                    </Grid>
-                    <Grid item xs={12} sm container    >
-                        <Grid item xs container ml={2} >
-                            <Grid className='sm:items-center  ' item xs container direction="column" justifyContent="flex-start" alignItems="flex-start" sx={{}}>
-                                <Typography className='text-gray-700 font-extrabold text-start ' variant="h4" component="div" sx={{}}>
-                                    Make good things <span className='text-blue-800'>together</span>.
-                                </Typography>
-                                <Typography variant="h5" gutterBottom>
-                                    GDG Istanbul
-                                </Typography>
-                                <Typography variant="body2" className='text-left' color="text.secondary" gutterBottom>
-                                    GDG Istanbul, Google teknolojilerine ilgi duyan, bir şeyler geliştirmek ve bilgi paylaşımında bulunmak isteyen insanlardan oluşan bir topluluktur.
-                                </Typography>
-                                <Typography sx={{ cursor: 'pointer' }} variant="body2" className='mx-5'>
-                                    <HashButton>
-                                        #HSD
-                                    </HashButton>
-                                    <HashButton>
-                                        #HSD Istanbul
-                                    </HashButton>
-                                    <HashButton>
-                                        #HSD Istanbul
-                                    </HashButton>
-                                </Typography>
-                                <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                                    <HomeButton variant="contained">Become a member</HomeButton>
-                                </Typography>
-                            </Grid>
-
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </div>
-        </>
-    )
-}
+ 
 
 const HomeButton = styled(Button)({
     boxShadow: 'none',

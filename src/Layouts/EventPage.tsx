@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 // import Box from '@mui/material/Box';
-import { EventCard } from '../components/EventCard';
+import { EventCard } from './EventCard';
 
 
 export const EventsPage = () => {

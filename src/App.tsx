@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer';
-import MobilMenu from './components/MobilMenu';
-import Navbar from './components/Navbar';
+import Footer from './Layouts/Footer';
+import MobilMenu from './Layouts/MobilMenu';
+import Navbar from './Layouts/Navbar';
 import EventsPage from './pages/EventsPage';
 
 //Routers link
