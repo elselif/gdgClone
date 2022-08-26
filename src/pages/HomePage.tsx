@@ -1,4 +1,3 @@
-import Navbar from '../Layouts/Navbar';
 import { HelloDiv } from '../Layouts/HelloDiv';
 import { About } from '../Layouts/About';
 import { Meetings } from '../Layouts/Meeting';
