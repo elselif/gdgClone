@@ -1,10 +1,10 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../Layouts/Navbar';
 import { HelloDiv } from '../Layouts/HelloDiv';
 import { About } from '../Layouts/About';
 import { Meetings } from '../Layouts/Meeting';
 import {  EventsPage } from '../Layouts/EventPage';
 import { Partner } from '../Layouts/Partners';
-import WhatWeDo from '../components/WhatWeDo';
+import WhatWeDo from '../Layouts/WhatWeDo';
 
 export default function HomePage() {
   return (
