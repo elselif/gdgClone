@@ -5,7 +5,6 @@ import Footer from './Layouts/Footer';
 import MobilMenu from './Layouts/MobilMenu';
 import Navbar from './Layouts/Navbar';
 import EventsPage from './pages/EventsPage';
-import ThemeContext from './context/ThemeContext';
 
 //Routers link
 import Home from './pages/HomePage';
@@ -15,13 +14,17 @@ import TeamPage from './pages/TeamPage';
 import SpeakersPage from './pages/SpeakersPage';
 import ContactPage from './pages/ContactPage';
 import BlogsPage from './pages/BlogsPage';
-import { ThemeProvider } from './context/ThemeContext';
+
+
+import { ThemeContextProvider } from './context/ThemeContext';
+import Button from './components/Button';
 
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeContextProvider>
       <div className="App">
-        <Navbar />
+        <Button />
+        {/* <Navbar />
         <Routes>
           <Route path='/' element={<Home />}> </Route>
           <Route path='/home' element={<HomePage />}> </Route>
@@ -33,9 +36,9 @@ function App() {
           <Route path='/blogs' element={<BlogsPage />}> </Route>
         </Routes>
         <MobilMenu />
-        <Footer />
+        <Footer /> */}
       </div>
-    </ThemeProvider>
+    </ThemeContextProvider>
   );
 }
 
