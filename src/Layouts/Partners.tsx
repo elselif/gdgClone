@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import { Button, Card, CardActionArea, CardMedia } from '@mui/material';
+import { Card, CardMedia } from '@mui/material';
 
 
 export const Partner = () => {

@@ -1,15 +1,25 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 import { theme } from './theme'
+
+export type SetTheme = {
+  admin: "string"
+}
+
+type PickContentType = {
+  pick : SetTheme | null,
+  setPick: React.Dispatch<React.SetStateAction<SetTheme | null>>
+}
 
 type ThemeContextProviderProps = {
   children: React.ReactNode
 }
 
-export const ThemeContext = createContext(theme)
+export const ThemeContext = createContext<PickContentType | null>(null)
 
 export const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
+  const [pick, setPick] = useState<SetTheme| null>(null);
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={{pick,setPick}}>
       {children}
     </ThemeContext.Provider>
   )

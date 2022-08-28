@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -7,15 +7,8 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import CodeIcon from '@mui/icons-material/Code';
 import SchoolIcon from '@mui/icons-material/School';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
-import { Typography } from '@mui/material';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
+
 
 export default function FullWidthGrid() {
     return (
@@ -27,7 +20,7 @@ export default function FullWidthGrid() {
                     <Typography variant='body1' align='left' sx={{ marginBottom: 1 }}>About different Google technologies</Typography>
                 </Grid>
                 <Grid xs={6} md={2} >
-                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                    <Item sx={{ backgroundColor: '#f5f5f5', boxShadow: 0 }}>
                         <Grid >
                             <ChatBubbleIcon fontSize='large' />
                             <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Talks</Typography>
@@ -37,7 +30,7 @@ export default function FullWidthGrid() {
                     </Item>
                 </Grid>
                 <Grid xs={6} md={2}>
-                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                    <Item sx={{ backgroundColor: '#f5f5f5', boxShadow: 0 }}>
                         <Grid>
                             <CodeIcon fontSize='large' />
                             <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Codelabs</Typography>
@@ -47,7 +40,7 @@ export default function FullWidthGrid() {
                     </Item >
                 </Grid>
                 <Grid xs={6} md={2}>
-                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                    <Item sx={{ backgroundColor: '#f5f5f5', boxShadow: 0 }}>
                         <Grid>
                             <SchoolIcon fontSize='large' />
                             <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Campus Roadshows</Typography>
@@ -56,7 +49,7 @@ export default function FullWidthGrid() {
                     </Item>
                 </Grid>
                 <Grid xs={6} md={2}>
-                    <Item sx={{ backgroundColor: '#f5f5f5',boxShadow:0 }}>
+                    <Item sx={{ backgroundColor: '#f5f5f5', boxShadow: 0 }}>
                         <Grid>
                             <BubbleChartIcon fontSize='large' />
                             <Typography color="black" variant='h6' sx={{ marginBottom: 2, marginTop: 1 }}>Live Viewing Parties</Typography>
@@ -71,3 +64,11 @@ export default function FullWidthGrid() {
         </Box>
     );
 }
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
