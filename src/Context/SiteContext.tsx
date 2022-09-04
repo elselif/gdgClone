@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 interface SiteContextProps {
     theme: string;
@@ -8,10 +8,34 @@ interface SiteContextProps {
 }
 const defaultValue: SiteContextProps = {
     theme: "light",
-    setTheme: () => {},
+    setTheme: () => { },
     lang: "tr",
-    setLang: () => {},
+    setLang: () => { },
+};
+type Props = {
+    children?: JSX.Element|JSX.Element[];
 };
 
-const SiteContext = createContext<SiteContextProps>(defaultValue);
-export default SiteContext;
+export  const SiteContext = createContext<SiteContextProps>(defaultValue);
+
+
+const Provider = ({ children }: Props) => {
+    const [theme, setTheme] = useState('light')
+    const [lang, setLang] = useState('tr')
+
+    const data = {
+        theme,
+        setTheme,
+        lang,
+        setLang,
+    }
+    return (
+        <SiteContext.Provider value={data}>
+            {children}
+        </SiteContext.Provider>
+    )
+}
+
+export const useSite = () => useContext(SiteContext)
+
+export default Provider;
