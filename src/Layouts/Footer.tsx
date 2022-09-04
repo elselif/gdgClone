@@ -1,12 +1,4 @@
-import React from 'react'
-
-
-
-
 export default function Footer() {
-
-    
-
   return (
     <div className='px-32 pb-10  tablex:hidden  '>
         <div className='my-4 '>

@@ -13,7 +13,7 @@ export const HelloDiv = () => {
                 <Grid alignItems="center" direction="row" justifyContent="flex-start" container >
                     <Grid item >
                         <ButtonBase className="">
-                            <img src={require("../images/hello.png")} alt='i' className='lg:w-[350px] sm:w-[500px]  whitespace-nowrap ' />
+                            <img src={require("../Images/hello.png")} alt='i' className='lg:w-[350px] sm:w-[500px]  whitespace-nowrap ' />
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container    >

@@ -4,21 +4,20 @@ import './App.css';
 import Footer from './Layouts/Footer';
 import MobilMenu from './Layouts/MobilMenu';
 import Navbar from './Layouts/Navbar';
-import EventsPage from './pages/EventsPage';
+import EventsPage from './Pages/EventsPage';
 
 //Routers link
-import Home from './pages/HomePage';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import TeamPage from './pages/TeamPage';
-import SpeakersPage from './pages/SpeakersPage';
-import ContactPage from './pages/ContactPage';
-import BlogsPage from './pages/BlogsPage';
+import Home from './Pages/HomePage';
+import HomePage from './Pages/HomePage';
+import AboutPage from './Pages/AboutPage';
+import TeamPage from './Pages/TeamPage';
+import SpeakersPage from './Pages/SpeakersPage';
+import ContactPage from './Pages/ContactPage';
+import BlogsPage from './Pages/BlogsPage';
 
 function App() {
   return (
     <div className="App">
-
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}> </Route>
@@ -32,7 +31,6 @@ function App() {
       </Routes>
       <MobilMenu />
       <Footer />
-
     </div>
   );
 }

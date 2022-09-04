@@ -64,9 +64,6 @@ export default function FullWidthGrid() {
                         </Grid>
                     </Item>
                 </Grid>
-
-
-
             </Grid>
         </Box>
     );

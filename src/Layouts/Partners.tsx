@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import { Button, Card, CardActionArea, CardMedia } from '@mui/material';
+import { Card, CardMedia } from '@mui/material';
 
 
 export const Partner = () => {
@@ -14,15 +14,9 @@ export const Partner = () => {
                         If you’re interested in being showcased throughout , contact info@gdgistanbul.com to discuss sponsorship opportunities.</p>
                     <div className='mt-3'>
                         <h2 className='text-start my-5 text-xl'>Template Creator</h2>
-                        <Card sx={{ maxWidth: 200,maxHeight:400 }}>
-                       
-                            <CardMedia
-                            component="img"
-                            
-                            image={require("../images/gdg.png")}
-                            
-                            />
-                            </Card>
+                        <Card sx={{ maxWidth: 200, maxHeight: 400 }}>
+                            <CardMedia component="img" image={require("../Images/gdg.png")} />
+                        </Card>
                     </div>
                 </div>
             </div>

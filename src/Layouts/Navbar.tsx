@@ -18,32 +18,12 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
-import { ListItemAvatar, ListItemIcon } from '@mui/material';
+import {ListItemIcon } from '@mui/material';
 import TryIcon from '@mui/icons-material/Try';
 import PersonIcon from '@mui/icons-material/Person';
 import TextsmsIcon from '@mui/icons-material/Textsms';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#212121',
-    },
-    secondary: {
-      // This is green.A700 as hex.
-      main: '#ffff',
-    },
-    error: {
-      main: '#737373',
-    },
-  },
-  typography: {
-    button: {
-      textTransform: 'none'
-    }
-  }
-});
 
 interface Props {
   window?: () => Window;
@@ -67,64 +47,64 @@ export default function Navbar(props: Props) {
         GDG Istanbul
       </Typography>
       <Divider />
-     <List >
-        <ListItem sx={{pl:0}}>
+      <List >
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><HomeIcon/></ListItemIcon>
-          <ListItemText>Home</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><HomeIcon /></ListItemIcon>
+              <ListItemText>Home</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem sx={{pl:0}}>
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/Events`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><TryIcon/></ListItemIcon>
-          <ListItemText>Events</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><TryIcon /></ListItemIcon>
+              <ListItemText>Events</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem >
-        <ListItem sx={{pl:0}}>
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/Team`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><PersonIcon/></ListItemIcon>
-          <ListItemText>Team</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><PersonIcon /></ListItemIcon>
+              <ListItemText>Team</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem sx={{pl:0}}>
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/Speakers`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><TryIcon/></ListItemIcon>
-          <ListItemText>Speaker</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><TryIcon /></ListItemIcon>
+              <ListItemText>Speaker</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem sx={{pl:0}}>
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/About`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><TextsmsIcon/></ListItemIcon>
-          <ListItemText>About</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><TextsmsIcon /></ListItemIcon>
+              <ListItemText>About</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem sx={{pl:0}}>
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/Contacts`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><ContactsIcon/></ListItemIcon>
-          <ListItemText>Contact</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><ContactsIcon /></ListItemIcon>
+              <ListItemText>Contact</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-        <ListItem sx={{pl:0}}>
+        <ListItem sx={{ pl: 0 }}>
           <Link to={`/Blogs`} >
-            <ListItemButton sx={{width:230,borderTopRightRadius:50,borderBottomRightRadius:50,}}>
-          <ListItemIcon><RssFeedIcon/></ListItemIcon>
-          <ListItemText>Blog</ListItemText>
+            <ListItemButton sx={{ width: 230, borderTopRightRadius: 50, borderBottomRightRadius: 50, }}>
+              <ListItemIcon><RssFeedIcon /></ListItemIcon>
+              <ListItemText>Blog</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
-     </List>
+      </List>
     </Box>
   );
 
@@ -160,7 +140,7 @@ export default function Navbar(props: Props) {
 
               {navItems.map((item) => (
                 <Link to={`/${item}`} >
-                  <Button key={item} sx={{ letterSpacing: 1, fontWeight: 'regular', color: '#202020', marginX: '11px', cursor: "pointer", paddingX: 2, whiteSpace: 1, fontSize: 18, marginY: 2.5 }}>
+                  <Button key={item} sx={{ letterSpacing: 1, fontWeight: 'regular', color: '#202020', marginX: '1px', cursor: "pointer", paddingX: 2, whiteSpace: 1, fontSize: 15, marginY: 2.5 }}>
                     {item}
                   </Button>
                 </Link>
@@ -197,10 +177,30 @@ export default function Navbar(props: Props) {
             {drawer}
           </Drawer>
         </Box>
-        <Box  sx={{ paddingBottom: 5 }}>
+        <Box sx={{ paddingBottom: 5 }}>
           <Toolbar />
         </Box>
       </Box>
     </ThemeProvider>
   );
 }
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#212121',
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#ffff',
+    },
+    error: {
+      main: '#737373',
+    },
+  },
+  typography: {
+    button: {
+      textTransform: 'none'
+    }
+  }
+});
