@@ -13,10 +13,10 @@ const defaultValue: SiteContextProps = {
     setLang: () => { },
 };
 type Props = {
-    children?: JSX.Element|JSX.Element[];
+    children?: JSX.Element | JSX.Element[];
 };
 
-export  const SiteContext = createContext<SiteContextProps>(defaultValue);
+export const SiteContext = createContext<SiteContextProps>(defaultValue);
 
 
 const Provider = ({ children }: Props) => {
@@ -31,7 +31,9 @@ const Provider = ({ children }: Props) => {
     }
     return (
         <SiteContext.Provider value={data}>
-            {children}
+            <div className="App" id={theme}>
+                {children}
+            </div>
         </SiteContext.Provider>
     )
 }
@@ -39,3 +41,4 @@ const Provider = ({ children }: Props) => {
 export const useSite = () => useContext(SiteContext)
 
 export default Provider;
+

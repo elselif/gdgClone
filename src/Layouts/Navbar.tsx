@@ -39,7 +39,6 @@ const navItems = ['Home', 'Events', 'Team', 'Speakers', 'About', 'Contact', 'Blo
 export default function Navbar(props: Props) {
 
 
-
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -115,9 +114,8 @@ export default function Navbar(props: Props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-
-
-
+  
+    
 
   return (
     <ThemeProvider theme={theme}>
@@ -188,6 +186,7 @@ export default function Navbar(props: Props) {
 }
 
 const theme = createTheme({
+  
   palette: {
     primary: {
       main: '#212121',

@@ -1,12 +1,9 @@
 import { IconButton } from '@mui/material';
-import React from 'react'
 
 //Context
-import { useContext } from 'react';
 import { useSite } from './SiteContext';
 
 //Icons
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Notifications';
 
 

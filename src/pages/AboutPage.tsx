@@ -1,12 +1,13 @@
 import { Box } from '@mui/material'
-import React from 'react'
+import { SwitchTheme } from '../Context/SwitchTheme'
 
 export default function AboutPage() {
   return (
     <div >
-     <Box sx={{}}>
-      <h1>deneme</h1>
-     </Box>
+      <Box sx={{}}>
+        <h1>deneme</h1>
+        <SwitchTheme />
+      </Box>
     </div>
   )
 }
