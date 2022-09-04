@@ -15,15 +15,18 @@ import Button from '@mui/material/Button';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider, } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
-import {ListItemIcon } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
 import TryIcon from '@mui/icons-material/Try';
 import PersonIcon from '@mui/icons-material/Person';
 import TextsmsIcon from '@mui/icons-material/Textsms';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
+import { SwitchTheme } from '../Context/SwitchTheme';
+
+//Switch Theme
 
 interface Props {
   window?: () => Window;
@@ -34,6 +37,9 @@ const drawerWidth = 240;
 const navItems = ['Home', 'Events', 'Team', 'Speakers', 'About', 'Contact', 'Blogs'];
 
 export default function Navbar(props: Props) {
+
+
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -149,14 +155,10 @@ export default function Navbar(props: Props) {
             </Box>
             <Box sx={{ justifyContent: 'space-between', }}>
               <IconButton>
-                <NotificationsIcon sx={{ color: '#737373', fontSize: 24, marginTop: '1px', }} />
-
+                <Brightness4Icon />
               </IconButton>
               <span className='mx-3' />
-              <IconButton>
-                <Brightness4Icon sx={{ color: '#737373', fontSize: 24, marginTop: '1px', }} />
-
-              </IconButton>
+              <SwitchTheme />
             </Box>
           </Toolbar>
         </AppBar>

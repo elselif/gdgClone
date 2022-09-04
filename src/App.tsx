@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Layouts/Footer';
@@ -15,9 +15,23 @@ import SpeakersPage from './Pages/SpeakersPage';
 import ContactPage from './Pages/ContactPage';
 import BlogsPage from './Pages/BlogsPage';
 
+//Context
+import SiteContext from './Context/SiteContext';
 function App() {
+
+  const [theme, setTheme] = useState('light')
+  const [lang, setLang] = useState('tr')
+
+  const data = {
+    theme,
+    setTheme,
+    lang,
+    setLang,
+  }
+
+  console.log(data);
   return (
-    <div className="App">
+    <SiteContext.Provider value={data} >
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}> </Route>
@@ -31,7 +45,7 @@ function App() {
       </Routes>
       <MobilMenu />
       <Footer />
-    </div>
+    </SiteContext.Provider >
   );
 }
 
