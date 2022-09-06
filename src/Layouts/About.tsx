@@ -12,7 +12,8 @@ export const About = () => {
                     <p className='text-md my-3'>GDG Istanbul, Google teknolojilerine ilgi duyan, bir şeyler geliştirmek ve bilgi paylaşımında bulunmak isteyen insanlardan oluşan bir topluluktur. Toplantılarımıza katılıp hem kendi deneyimlerinizi bizimle paylaşabilir hem de başkalarının deneyimlerinden faydalanabilirsiniz. Etkinliklerimizin popüler konulari genelde Android ve GWT olsada bizimle paylaşmak istediğiniz her konuya açığız.</p>
                     <Button color='secondary' variant="outlined">Meetup Page</Button><br></br>
                     <div className='mt-3'>
-                        <a href="#">See More about GDG Istanbul</a>
+                        <a href="#">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Layouts/Footer';
@@ -15,9 +15,14 @@ import SpeakersPage from './Pages/SpeakersPage';
 import ContactPage from './Pages/ContactPage';
 import BlogsPage from './Pages/BlogsPage';
 
+//Context
+import SiteProvider from './Context/SiteContext';
 function App() {
+
+
+
   return (
-    <div className="App">
+    <SiteProvider>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}> </Route>
@@ -31,7 +36,7 @@ function App() {
       </Routes>
       <MobilMenu />
       <Footer />
-    </div>
+    </SiteProvider>
   );
 }
 

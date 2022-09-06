@@ -1,6 +1,4 @@
-import * as React from 'react';
-import Item from '@mui/material/Paper';
-import Box from '@mui/material/Grid';
+
 import { Grid, Typography } from '@mui/material';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import CodeIcon from '@mui/icons-material/Code';
