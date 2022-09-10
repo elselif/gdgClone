@@ -8,10 +8,7 @@ export default function EventsPage() {
 
       <div>Events Page</div>
 
-      <div>Events Page</div>
-
-      <div>Events Page</div>
-
+    
 
     </div>
 
